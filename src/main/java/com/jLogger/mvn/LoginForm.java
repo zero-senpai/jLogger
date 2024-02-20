@@ -50,7 +50,11 @@ public class LoginForm extends JFrame {
             JOptionPane.showMessageDialog(this, "Login failed. Invalid username or password.");
         }
     }
-
+    /**
+     * @param username: Username passed from the GUI field, plaintext
+     * @param password: String form of password passed from field.
+     * @return hashedPasswordFromDB is the un-hashed password to match from the password param
+    */
     private boolean authenticateUser(String username, String password) {
         
     	String hashedPasswordFromDB = null;
