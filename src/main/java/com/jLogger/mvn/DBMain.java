@@ -13,23 +13,5 @@ import java.sql.DriverManager;
 public class DBMain {
 
 	
-	public static void main(String[] args) {
-		
-		//Create connection
-		try (Connection conn = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)) {
-			if (conn != null) {
-				System.out.println("Connected to MySQL DB");
-			} else {
-				System.out.println("Could not connect to MySQL!");
-			}
-		} catch (SQLException e) {
-			System.err.println("Connection failed!!!!");
-			e.printStackTrace();
-		}
-		
-		return;
-	}
-	
-	
 	
 }
