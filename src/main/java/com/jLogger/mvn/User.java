@@ -9,7 +9,6 @@ import org.mindrot.jbcrypt.BCrypt;
 public class User extends DBConfig {
 	private String username;
 	private String password;
-	private int age;
 	private long accountAge;
 	
 	
@@ -17,15 +16,13 @@ public class User extends DBConfig {
 	public User() {
 		this.username = "None";
 		this.password = "empty";
-		this.age = 0;
 		this.accountAge = 0;
 	}
 	
 	//Constructor Overload - Information
-	public User(String name, String pwd, int ageYears) {
+	public User(String name, String pwd) {
 		this.username = name;
 		this.password = hashPassword(pwd);
-		this.age = ageYears;
 	}
 	
 	private String hashPassword(String pwd) {
