@@ -10,6 +10,6 @@ package com.jLogger.mvn;
 public class DTO {
 	
 	public final static String INSERT_USER = "INSERT INTO users (username, password_hash) VALUES (?, ?)";
-	
+	public final static String CHECK_PASS = "SELECT password_hash FROM users WHERE username = ?";
 	
 }
