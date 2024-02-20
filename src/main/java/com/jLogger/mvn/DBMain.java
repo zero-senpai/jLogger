@@ -12,9 +12,6 @@ import java.sql.DriverManager;
 
 public class DBMain {
 
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/mydb";
-	private static final String USERNAME = "admin";
-	private static final String PASSWORD = "root";
 	
 	public static void main(String[] args) {
 		
@@ -30,7 +27,7 @@ public class DBMain {
 			e.printStackTrace();
 		}
 		
-		
+		return;
 	}
 	
 	

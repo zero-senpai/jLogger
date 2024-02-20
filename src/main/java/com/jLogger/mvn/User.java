@@ -1,7 +1,12 @@
 package com.jLogger.mvn;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import org.mindrot.jbcrypt.BCrypt;
 
-public class User {
+
+public class User extends DBConfig {
 	private String username;
 	private String password;
 	private int age;
