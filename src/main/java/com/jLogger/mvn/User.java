@@ -34,10 +34,13 @@ public class User extends DBConfig {
 	}
 	
 	public void saveToDatabase() {
-		try (
-			Connection conn = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
-			PreparedStatement statement = conn.prepareStatement(DTO.INSERT_USER);
-		) {
+		
+		Connection conn = null;
+		PreparedStatement statement = null;
+		
+		try {
+			conn = DBConfig.getConnection();
+			statement = conn.prepareStatement(DTO.INSERT_USER);
 			statement.setString(1,  username);
 			statement.setString(2,  password);
 			statement.executeUpdate();
