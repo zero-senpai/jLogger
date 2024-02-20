@@ -36,6 +36,22 @@ public class User extends DBConfig {
 		return BCrypt.checkpw(pwd, password);
 	}
 	
+	public void saveToDatabase() {
+		try (
+			Connection conn = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
+			PreparedStatement statement = conn.prepareStatement(DTO.INSERT_USER);
+		) {
+			statement.setString(1,  username);
+			statement.setString(2,  password);
+			statement.executeUpdate();
+			System.out.println("User was saved to the database!");
+		} catch (SQLException e) {
+			System.err.println("Failed to save user to DB: " + e.getMessage());
+		}
+	
+	}
+	
+	
 	//Getters and Setters
 	public String getUsername() {
 		return username;
