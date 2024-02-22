@@ -1,9 +1,12 @@
-package com.jLogger.mvn;
+package com.jLogger.mvn.models;
 import java.sql.Connection;
+import com.jLogger.mvn.*;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import org.mindrot.jbcrypt.BCrypt;
+
+import com.jLogger.mvn.DBConfig;
 
 
 public class User extends DBConfig {

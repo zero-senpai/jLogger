@@ -1,5 +1,8 @@
 package com.jLogger.mvn;
 import javax.swing.*;
+
+import com.jLogger.mvn.models.User;
+
 import java.awt.*;
 import java.awt.event.*;
 

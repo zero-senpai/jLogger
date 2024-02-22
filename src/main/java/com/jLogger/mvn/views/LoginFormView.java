@@ -1,4 +1,4 @@
-package com.jLogger.mvn;
+package com.jLogger.mvn.views;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -8,12 +8,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.mindrot.jbcrypt.BCrypt;
+import com.jLogger.mvn.*;
 
-public class LoginForm extends JFrame {
+public class LoginFormView extends JFrame {
     private JTextField usernameField;
     private JPasswordField passwordField;
+    private DBConfig DBConfig;
 
-    public LoginForm() {
+    public LoginFormView() {
         super("Login");
 
         JPanel panel = new JPanel(new GridLayout(3, 2));
@@ -86,7 +88,7 @@ public class LoginForm extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                new LoginForm();
+                new LoginFormView();
             }
         });
     }
